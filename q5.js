@@ -68,33 +68,48 @@
 
 function manipulacaoArrayLinguagens(){
 
-    let linguagens = ["JavaScript", "Python", "Java"]
-    console.log(linguagens)
-
-    linguagens.push("C++", "Ruby")
-    console.log(linguagens)
-
-    linguagens.shift()
-    console.log(linguagens)
-
-    linguagens.splice(1,0, "TypeScript")
-    linguagens.splice(2,0, "Go")
-    console.log(linguagens)
-
-    linguagens.unshift("Rust");
-    console.log(linguagens)
-
-    console.log(linguagens.length())
-
-    const anosLancamento = {
+  const anosLancamento = {
     JavaScript: 1995,
-     Python: 1991,
+    Python: 1991,
     Java: 1995,
     "C++": 1985,
-      Ruby: 1995,
-      TypeScript: 2012,
-      Go: 2009,
-      Rust: 2010
+    Ruby: 1995,
+    TypeScript: 2012,
+    Go: 2009,
+    Rust: 2010
   };
 
-}
+   let linguagens = ["JavaScript", "Python", "Java"]
+   console.log(linguagens)
+
+    linguagens.push("C++")
+    linguagens.push("Ruby")
+    console.log(linguagens)
+
+    linguagens.shift();
+    console.log(linguagens)
+
+    linguagens.splice(1,0, "TypeScript", "Go")
+    console.log(linguagens)
+
+    linguagens.unshift("Rust")
+    console.log(linguagens)
+
+    console.log(linguagens.length)
+
+
+  let versoes = linguagens.map(i => anosLancamento[i]);
+    console.log(versoes);
+
+    let modernas = linguagens.filter(i => anosLancamento[i] > 2000);
+
+    return {
+        linguagensFinal: linguagens,
+        tamanhoArray: linguagens.length,
+        versoes: versoes,
+        modernas: modernas
+    };
+  
+  }
+
+module.exports = manipulacaoArrayLinguagens;

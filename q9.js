@@ -41,3 +41,28 @@
  * - A função seja exportada com module.exports
  */
 
+function criarEstudante(){
+
+    const criarEstudante = estudante = {
+        nome: "Leandro",
+        idade: 17,
+        nota1: 8,
+        nota2: 9,
+        nota9: 7
+    }
+
+    estudante.media = (nota1 + nota2 + nota3) /3
+
+    if(estudante.media >= 7){
+        estudante.situacao = "aprovado"
+    }else if(estudante.media < 7){
+        estudante.situacao = "reprovado"
+    }
+
+    return criarEstudante;
+
+}
+
+criarEstudante();
+
+module.exports = criarEstudante;

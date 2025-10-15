@@ -29,3 +29,16 @@
  * - Use métodos como filter(), includes(), ou Set para implementar
  * - A função seja exportada com module.exports
  */
+
+let array1 = [1, 2, 3, 4, 5, 10, 15, 16]
+let array2 = [3, 4, 5, 6, 7, 15, 24]
+
+function elementosComuns(array1, array2){
+
+    const resultado = array1.filter(item => array2.includes(item))
+
+    return resultado;
+}
+
+console.log(elementosComuns(array1, array2));
+module.exports = elementosComuns;

@@ -56,4 +56,28 @@
  * - A função seja exportada com module.exports
  */
 
+function manipulacaoObjeto(){
 
+   let livro = {
+    titulo: "O Alquimista",
+    autor: "Paulo Coelho",
+    anoPublicacao: 1988
+  }
+
+  console.log(livro.titulo)
+
+  livro.anoPublicacao = 1992;
+  livro.editora = "Rocco"
+
+  livro.getIdade = function(){
+    return new Date().getFullYear() - livro.anoPublicacao;
+  }
+  livro.getDescricao =function(){
+    return console.log("O livro" + livro.titulo + " foi escrito por " + livro.autor + " e publicado em " + livro.anoPublicacao)
+  }
+return livro;
+}
+
+manipulacaoObjeto();
+
+module.exports = manipulacaoObjeto;
